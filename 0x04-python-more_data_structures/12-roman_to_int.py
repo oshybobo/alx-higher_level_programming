@@ -8,5 +8,5 @@ def roman_to_int(roman_string):
 
     for i in reversed(roman_string):
         number = dig[i]
-        total = total + number if total < number * 5 else -number
+        total += number if total < number * 5 else -number
     return total
