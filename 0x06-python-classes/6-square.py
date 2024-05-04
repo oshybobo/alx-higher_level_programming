@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Module for square"""
+"""My square module"""
 
 
 class Square:
     """defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Create a square
+        """Create a Square
         Args:
-            size: length of a side of square
-            position: where the square is (cordinates)
+            size: length of a side of Square
+            position: where the square is (coordinates)
         """
         self.size = size
         self.position = position
@@ -19,7 +19,7 @@ class Square:
 
     @property
     def size(self):
-        """The property of size as the len of a side of square
+        """"The propery of size as the len of a side of Square
         Raises:
             TypeError: if size != int
             ValueError: if size < 0
@@ -36,7 +36,7 @@ class Square:
 
     @property
     def position(self):
-        """property of the cordinates of this square
+        """property of the coordinates of this Square
         Raises:
             TypeError: if value != a tuple of 2 integers < 0
         """
@@ -44,7 +44,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """set the position of this square
+        """set the position of this Square
         Args: value as a tuple of two positive integers
         Raises:
             TypeError: if value is not a tuple or any int in tuple < 0
@@ -58,6 +58,12 @@ class Square:
         self.__position = value
 
     def area(self):
+        """Get the area of a Square
+        Returns: The size squared
+        """
+        return self.__size * self.__size
+
+    def pos_print(self):
         """returns the position in spaces"""
         pos = ""
         if self.size == 0:
