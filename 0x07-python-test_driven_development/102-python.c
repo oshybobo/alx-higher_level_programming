@@ -4,12 +4,13 @@
 
 /**
  * print_python_string - Prints string information
- * @p: Python object
  *
+ * @p: Python Object
  * Return: no return
  */
 void print_python_string(PyObject *p)
 {
+
 	PyObject *str, *repr;
 
 	(void)repr;
@@ -31,4 +32,3 @@ void print_python_string(PyObject *p)
 	printf("  length: %ld\n", PyUnicode_GET_SIZE(p));
 	printf("  value: %s\n", PyBytes_AsString(str));
 }
-

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""solves the N-queens puzzle"""
+"""Solves the N-queens puzzle"""
 
 import sys
 
@@ -32,8 +32,8 @@ def get_solution(board):
 
 def xout(board, row, col):
     """X out spots on a chessboard.
-    All spots where non-attacking queens can
-    no longer be played are X-ed out.
+    All spots where non-attacking queens can no
+    longer be played are X-ed out.
     Args:
         board (list): The current working chessboard.
         row (int): The row where a queen was last played.
@@ -82,14 +82,14 @@ def xout(board, row, col):
 
 
 def recursive_solve(board, row, queens, solutions):
-    """Recursivelt solve an N-queens puzle.
+    """Recursively solve an N-queens puzzle.
     Args:
-            board (list): The current working chessboard.
-            row (int): The current working row.
-            queens (int): The current number of placed queens.
-            solutions (list): A list of lists of solutions.
+        board (list): The current working chessboard.
+        row (int): The current working row.
+        queens (int): The current number of placed queens.
+        solutions (list): A list of lists of solutions.
     Returns:
-            solutions
+        solutions
     """
     if queens == len(board):
         solutions.append(get_solution(board))
@@ -102,6 +102,7 @@ def recursive_solve(board, row, queens, solutions):
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1,
                                         queens + 1, solutions)
+
     return (solutions)
 
 

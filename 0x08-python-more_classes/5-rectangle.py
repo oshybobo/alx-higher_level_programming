@@ -30,7 +30,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def heigth(self):
+    def height(self):
         """getter for the private instance attribute height"""
         return self.__height
 
@@ -44,7 +44,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """returns the perimeter of the rectangle"""
+        """returns the area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):

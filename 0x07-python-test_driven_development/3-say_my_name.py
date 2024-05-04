@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module provides a test for a string printing module
+This module provides a test for a string printing module.
 """
 
 
